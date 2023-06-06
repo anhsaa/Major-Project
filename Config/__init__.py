@@ -16,4 +16,10 @@ api = Api(app, version='1.0', title='Fustal',
 cors = CORS(app)
 
 from book import *
-from main import *   
+from user import *   
+from news import * 
+from owner import * 
+from payment import * 
+from venue import*
+from authen import*
+from prices import*
