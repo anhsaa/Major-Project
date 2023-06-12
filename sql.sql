@@ -8,7 +8,7 @@ create table user(
 );
 
 create table owner(
-	owner_id int primary key,
+	owner_id INT PRIMARY KEY AUTO_INCREMENT,
 	owner_name varchar(50),
     password varchar(50),
     email varchar(50),
@@ -16,7 +16,7 @@ create table owner(
 );
 
 create table venue(
-	venue_id int primary key,
+	venue_id INT PRIMARY KEY AUTO_INCREMENT,
     owner_id int,
     image varchar(150),
 	venue_name varchar(50),
@@ -30,7 +30,7 @@ create table venue(
 );
 
 create table booking(
-	booking_id int primary key,
+	booking_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id int,
     venue_id int,
     booking_date datetime,
@@ -42,13 +42,13 @@ create table booking(
 );
 
 create table admin(
-	admin_id int primary key,
+	admin_id INT PRIMARY KEY AUTO_INCREMENT,
     admin_name varchar(50),
     admin_password varchar(50)
 );
 
 create table news(
-	news_id int primary key,
+	news_id INT PRIMARY KEY AUTO_INCREMENT,
     title varchar(100),
     venue_id int,
     image varchar(150),
@@ -59,7 +59,7 @@ create table news(
 );
 
 create table payment(
-	payment_id int primary key,
+	payment_id INT PRIMARY KEY AUTO_INCREMENT,
     booking_id int,
     user_id int,
     payment_date datetime,
@@ -69,7 +69,7 @@ create table payment(
 );
 
 create table rating(
-	rating_id int primary key,
+	rating_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id int,
     venue_id int,
     rating varchar(50),
@@ -78,7 +78,7 @@ create table rating(
 );
 
 create table feedback(
-	feedback_id int not null primary key auto_increment,
+	feedback_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id int,
 	comment varchar(50)
 );
